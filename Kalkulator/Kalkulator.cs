@@ -8,7 +8,11 @@ namespace Kalkulator
 {
     class Kalkulator
     {
-
+        /// <summary>
+        /// Pobiera od użytkownika pierwszą liczbę do kalkulatora.
+        /// Sprawdza czy podana wartość jest liczbą.
+        /// </summary>
+        /// <returns>double liczba</returns>
         public static double PodajPierwszaLiczbe ()
         {
             string sLiczba;
@@ -30,6 +34,12 @@ namespace Kalkulator
             } while (!(czyLiczba));
             return nLiczba;
         }
+        /// <summary>
+        /// Pobiera od użytkownika drugą liczbę do kalkulatora.
+        /// Sprawdza czy podana wartość jest liczbą.
+        /// Sprawdza czy w przypadku dzielenia nie jest to 0.
+        /// </summary>
+        /// <returns>double liczba</returns>
         public static double PodajDrugaLiczbe (string sOperator)
         {
             string sLiczba;
@@ -58,7 +68,12 @@ namespace Kalkulator
             } while (!(czyLiczba));
             return nLiczba;
         }
-        
+
+        /// <summary>
+        /// Pobiera od użytkownika operator działania matematycznego do kalkulatora.
+        /// +, -, *, /
+        /// </summary>
+        /// <returns>string sOperator</returns>
         public static string PodajOperator()
         {
             string sOperator;
@@ -92,7 +107,12 @@ namespace Kalkulator
             } while (!(okOperator));
             return sOperator;
         }
-
+        /// <summary>
+        /// Wyświetla wynik działania kalkulatora
+        /// </summary>
+        /// <param name="nLiczba1">Pierwsza liczba</param>
+        /// <param name="nLiczba2">Druga liczba</param>
+        /// <param name="sOperator">Operator działania</param>
         public static void WynikDzialaniaKalkulatora(double nLiczba1, double nLiczba2, string sOperator)
         {
             double wynik = 0;
